@@ -132,6 +132,19 @@ class Reporter {
   }
 }
 
+/** A CDN can refuse a burst of requests and serve the same address a moment later. */
+const DIRECT_RETRY_MS = 750;
+
+async function openDirect(url: string, signal: AbortSignal) {
+  try {
+    return await openResponse(url, { signal });
+  } catch (err) {
+    if (!(err instanceof JobError) || err.code !== 'expired' || signal.aborted) throw err;
+    await new Promise((resolve) => setTimeout(resolve, DIRECT_RETRY_MS));
+    return openResponse(url, { signal });
+  }
+}
+
 /**
  * A direct file the browser's own downloader was refused. Its requests cannot
  * carry the page's Referer, but a fetch can, and streaming keeps memory flat.
@@ -139,7 +152,7 @@ class Reporter {
 async function runDirect(plan: TrackPlan, hooks: RunHooks, signal: AbortSignal) {
   const { jobId, variant } = plan;
   await hooks.hosts(hostsOf([], variant));
-  const response = await openResponse(variant.url, { signal });
+  const response = await openDirect(variant.url, signal);
   const total = Number(response.headers.get('content-length')) || 0;
   const { ok, available } = await checkQuota(total);
   if (!ok) throw new JobError('disk', `Needs ${total} bytes, ${available} available`);

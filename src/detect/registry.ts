@@ -158,7 +158,9 @@ export function addTikTokFile(
   }
   // Signatures differ between requests, so the file id is what tells copies apart.
   const key = `${FILE_KEY}${fileId}`;
-  upsert(state, { ...itemFromReport(report, 'direct', pageUrl), id: hashId(key), key });
+  const file = itemFromReport(report, 'direct', pageUrl);
+  for (const variant of file.variants) variant.needsReferer = true;
+  upsert(state, { ...file, id: hashId(key), key });
 }
 
 export function addKnownMedia(state: TabState, known: KnownMedia[]): void {

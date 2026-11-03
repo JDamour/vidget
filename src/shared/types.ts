@@ -20,6 +20,8 @@ export interface Variant {
   sizeEstimate?: number;
   /** Separate tracks in containers the browser pipeline cannot merge yet. */
   needsFfmpeg?: boolean;
+  /** The CDN insists on the page's Referer, which the browser's downloader cannot send. */
+  needsReferer?: boolean;
 }
 
 export interface SubtitleTrack {

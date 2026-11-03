@@ -276,8 +276,13 @@ describe('TikTok extractor', () => {
   it('falls back to the play address', () => {
     const plain = { ...struct, video: { ...struct.video, bitrateInfo: undefined } };
     expect(parseTikTokPage(page(rehydration(plain)), '7')[0]?.variants).toEqual([
-      { id: 'tiktok-play', kind: 'direct', url: 'https://v16.test/play/' },
+      { id: 'tiktok-play', kind: 'direct', url: 'https://v16.test/play/', needsReferer: true },
     ]);
+  });
+
+  it('marks every file as needing the page Referer', () => {
+    const [media] = parseTikTokPage(page(rehydration(struct)), '7');
+    expect(media?.variants?.every((variant) => variant.needsReferer)).toBe(true);
   });
 
   it('ignores another video and a photo post', () => {
@@ -331,6 +336,12 @@ describe('TikTok feed', () => {
     expect(state.items).toHaveLength(1);
     expect(state.items[0]).toMatchObject({ title: '@someone - post 1', durationSec: 15 });
     expect(state.items[0]?.variants[0]?.codecs).toBe('h264');
+  });
+
+  it('marks a file the feed has not named as needing the Referer too', () => {
+    const state = emptyTab();
+    addTikTokFile(state, 'oUnknown', report('oUnknown'), pageUrl);
+    expect(state.items[0]?.variants[0]?.needsReferer).toBe(true);
   });
 
   it('renames files that streamed before the feed response arrived', () => {

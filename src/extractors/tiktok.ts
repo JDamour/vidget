@@ -50,6 +50,7 @@ function variantsOf({ bitrateInfo = [], playAddr }: NonNullable<TikTokItem['vide
         bitrate: Bitrate,
         codecs: CodecType,
         sizeEstimate: Number(PlayAddr?.DataSize) || undefined,
+        needsReferer: true,
       },
     });
   }
@@ -60,7 +61,7 @@ function variantsOf({ bitrateInfo = [], playAddr }: NonNullable<TikTokItem['vide
     )
     .map((entry) => entry.variant);
   if (variants.length || !playAddr) return variants;
-  return [{ id: 'tiktok-play', kind: 'direct', url: playAddr }];
+  return [{ id: 'tiktok-play', kind: 'direct', url: playAddr, needsReferer: true }];
 }
 
 function mediaOf(item: TikTokItem): ExtractedMedia | undefined {

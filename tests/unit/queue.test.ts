@@ -185,6 +185,23 @@ describe('JobManager', () => {
     expect(manager.get(job.id)).toMatchObject({ status: 'failed', errorCode: 'expired' });
   });
 
+  it('never hands a Referer-gated file to the browser downloader', async () => {
+    const gated: Variant = {
+      id: 'tiktok-576',
+      kind: 'direct',
+      url: 'https://v16-webapp-prime.tiktok.com/video/tos/alisg/x/oAVC1/',
+      needsReferer: true,
+    };
+    await manager.start(media({ variants: [gated] }), gated);
+    expect(platform.download).not.toHaveBeenCalled();
+    expect(platform.heavyRun).toHaveBeenCalledTimes(1);
+    expect(platform.setReferer).toHaveBeenCalledWith(
+      expect.any(String),
+      [gated.url],
+      'https://a.com/page',
+    );
+  });
+
   it('moves to the worker when the browser never starts a download', async () => {
     let lateStart: (id: number) => void = () => {};
     platform.download.mockReturnValueOnce(new Promise((resolve) => (lateStart = resolve)));

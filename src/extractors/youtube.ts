@@ -22,7 +22,10 @@ export function cleanYoutubeTitle(title: string | undefined): string {
 
 export const youtube: Extractor = {
   id: 'youtube',
-  matches: [/^https:\/\/(www\.|m\.)?youtube\.com\/(watch\?|shorts\/|live\/)/, /^https:\/\/youtu\.be\//],
+  matches: [
+    /^https:\/\/(www\.|m\.|music\.)?youtube\.com\/(watch\?|shorts\/|live\/)/,
+    /^https:\/\/youtu\.be\//,
+  ],
   async extract(ctx) {
     const id = youtubeVideoId(ctx.url);
     if (!id) return [];

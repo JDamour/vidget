@@ -56,11 +56,18 @@ function isExternal(job: Job): boolean {
 
 /**
  * The browser's downloader handles single files, the companion handles external
- * pages, and everything else runs in the worker.
+ * pages, and everything else runs in the worker. A file the CDN will hand over
+ * only with the page's Referer starts there: the browser's downloader would be
+ * refused, and the refusal can cost the address its signature.
  */
 function usesWorker(job: Job): boolean {
   if (isExternal(job)) return false;
-  return job.variant.kind !== 'direct' || !!job.variant.audioUrl || !!job.viaWorker;
+  return (
+    job.variant.kind !== 'direct' ||
+    !!job.variant.audioUrl ||
+    !!job.variant.needsReferer ||
+    !!job.viaWorker
+  );
 }
 
 export function codeForDownloadError(error: string | undefined): ErrorCode {
