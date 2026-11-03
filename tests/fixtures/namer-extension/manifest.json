@@ -1,0 +1,7 @@
+{
+  "manifest_version": 3,
+  "name": "Download listener stand-in",
+  "version": "1",
+  "permissions": ["downloads"],
+  "background": { "service_worker": "sw.js" }
+}

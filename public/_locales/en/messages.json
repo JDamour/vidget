@@ -1,0 +1,221 @@
+{
+  "extName": {
+    "message": "Vidget"
+  },
+  "extDescription": {
+    "message": "Detect and save non-DRM video from the pages you visit."
+  },
+  "actionDownload": {
+    "message": "Download"
+  },
+  "menuDownload": {
+    "message": "Download this video"
+  },
+  "emptyState": {
+    "message": "Play the video first, then open this again."
+  },
+  "statusProtected": {
+    "message": "Protected, cannot be downloaded"
+  },
+  "statusProtectedHint": {
+    "message": "This video uses DRM, so Vidget does not offer a download."
+  },
+  "statusLive": {
+    "message": "Live stream: recording is not available yet"
+  },
+  "statusParsing": {
+    "message": "Reading stream…"
+  },
+  "statusQueued": {
+    "message": "Queued"
+  },
+  "statusDownloading": {
+    "message": "Downloading"
+  },
+  "statusMerging": {
+    "message": "Merging"
+  },
+  "statusDone": {
+    "message": "Done"
+  },
+  "statusFailed": {
+    "message": "Failed"
+  },
+  "statusPaused": {
+    "message": "Paused"
+  },
+  "notifyDone": {
+    "message": "Download finished"
+  },
+  "notifyFailed": {
+    "message": "Download failed"
+  },
+  "errorExpired": {
+    "message": "The link expired. Reload the page and try again."
+  },
+  "errorNetwork": {
+    "message": "Network error. Check your connection and retry."
+  },
+  "errorDisk": {
+    "message": "Not enough disk space."
+  },
+  "errorProtected": {
+    "message": "This video is protected and cannot be downloaded."
+  },
+  "errorUnsupported": {
+    "message": "This format is not supported yet."
+  },
+  "errorCanceled": {
+    "message": "Canceled."
+  },
+  "errorUnknown": {
+    "message": "Something went wrong."
+  },
+  "actionPause": {
+    "message": "Pause"
+  },
+  "actionResume": {
+    "message": "Resume"
+  },
+  "actionCancel": {
+    "message": "Cancel or remove"
+  },
+  "actionRetry": {
+    "message": "Retry"
+  },
+  "actionShowFolder": {
+    "message": "Show in folder"
+  },
+  "actionCopyUrl": {
+    "message": "Copy source URL"
+  },
+  "actionClearHistory": {
+    "message": "Clear history"
+  },
+  "etaLeft": {
+    "message": "$1 left"
+  },
+  "segmentsProgress": {
+    "message": "$1/$2 segments"
+  },
+  "qualityLabel": {
+    "message": "Quality"
+  },
+  "popupDownloadsLink": {
+    "message": "All downloads"
+  },
+  "popupSettings": {
+    "message": "Settings"
+  },
+  "rightsNotice": {
+    "message": "Only download content you own, have permission for, or may lawfully copy."
+  },
+  "rightsAccept": {
+    "message": "I understand"
+  },
+  "accessTitle": {
+    "message": "Allow Vidget to see video on websites"
+  },
+  "accessBody": {
+    "message": "Video is often served from a different host than the page, so Vidget asks for access to all sites. It stays on your device."
+  },
+  "accessGrant": {
+    "message": "Allow access"
+  },
+  "downloadsTitle": {
+    "message": "Downloads"
+  },
+  "downloadsQueue": {
+    "message": "Queue"
+  },
+  "downloadsHistory": {
+    "message": "History"
+  },
+  "downloadsEmptyQueue": {
+    "message": "Nothing is downloading."
+  },
+  "downloadsEmptyHistory": {
+    "message": "No downloads to show."
+  },
+  "searchPlaceholder": {
+    "message": "Search"
+  },
+  "filterSite": {
+    "message": "All sites"
+  },
+  "filterStatus": {
+    "message": "All statuses"
+  },
+  "filterDate": {
+    "message": "Any date"
+  },
+  "filterToday": {
+    "message": "Last 24 hours"
+  },
+  "filterWeek": {
+    "message": "Last 7 days"
+  },
+  "filterMonth": {
+    "message": "Last 30 days"
+  },
+  "optionsTitle": {
+    "message": "Vidget settings"
+  },
+  "optQuality": {
+    "message": "Default quality"
+  },
+  "optQualityBest": {
+    "message": "Best available"
+  },
+  "optQualityAsk": {
+    "message": "Ask every time"
+  },
+  "optFilename": {
+    "message": "Filename template"
+  },
+  "optFilenameHint": {
+    "message": "Tokens: {title}, {site}, {date}, {quality}, {id}"
+  },
+  "optSubfolders": {
+    "message": "Save each site in its own subfolder"
+  },
+  "optWorkers": {
+    "message": "Parallel segment downloads (1 to 16)"
+  },
+  "optJobs": {
+    "message": "Downloads at the same time"
+  },
+  "optMinDuration": {
+    "message": "Ignore clips shorter than (seconds)"
+  },
+  "optMinSize": {
+    "message": "Ignore files smaller than (KB)"
+  },
+  "optInPage": {
+    "message": "Show the Download button over videos"
+  },
+  "optInPageOff": {
+    "message": "Hide the button on these sites"
+  },
+  "optInPageOffHint": {
+    "message": "One hostname per line, for example example.com"
+  },
+  "optHistoryDays": {
+    "message": "Clear history after (days)"
+  },
+  "optHistoryDaysHint": {
+    "message": "0 keeps the last 500 downloads."
+  },
+  "optRightsTitle": {
+    "message": "Your responsibility"
+  },
+  "optLicenses": {
+    "message": "Open-source licenses"
+  },
+  "siteUnavailable": {
+    "message": "Vidget can't download from this site."
+  },
+  "errorCompanion": {
+    "message": "The Vidget companion app is not installed or stopped working."
+  }
+}

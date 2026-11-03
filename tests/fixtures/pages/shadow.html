@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Shadow page</title>
+  </head>
+  <body>
+    <shadow-player></shadow-player>
+    <iframe src="/pages/frame.html" width="400" height="300"></iframe>
+    <script>
+      customElements.define(
+        'shadow-player',
+        class extends HTMLElement {
+          connectedCallback() {
+            const root = this.attachShadow({ mode: 'open' });
+            root.innerHTML = '<video preload="none" src="/direct/clip.mp4" width="320" height="180"></video>';
+          }
+        },
+      );
+    </script>
+  </body>
+</html>

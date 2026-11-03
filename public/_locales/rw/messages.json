@@ -1,0 +1,221 @@
+{
+  "extName": {
+    "message": "Vidget"
+  },
+  "extDescription": {
+    "message": "Menya kandi ubike amashusho adafite DRM yo ku mapaji usura."
+  },
+  "actionDownload": {
+    "message": "Kuramo"
+  },
+  "menuDownload": {
+    "message": "Kuramo iyi videwo"
+  },
+  "emptyState": {
+    "message": "Banza ukine videwo, hanyuma wongere ufungure hano."
+  },
+  "statusProtected": {
+    "message": "Irarinzwe, ntishobora gukururwa"
+  },
+  "statusProtectedHint": {
+    "message": "Iyi videwo ikoresha DRM, bityo Vidget ntitanga uburyo bwo kuyikuramo."
+  },
+  "statusLive": {
+    "message": "Imbonankubone: gufata ntibirashoboka"
+  },
+  "statusParsing": {
+    "message": "Birimo gusoma…"
+  },
+  "statusQueued": {
+    "message": "Bitegereje"
+  },
+  "statusDownloading": {
+    "message": "Birimo gukururwa"
+  },
+  "statusMerging": {
+    "message": "Birimo guhuzwa"
+  },
+  "statusDone": {
+    "message": "Byarangiye"
+  },
+  "statusFailed": {
+    "message": "Byanze"
+  },
+  "statusPaused": {
+    "message": "Byahagaritswe"
+  },
+  "notifyDone": {
+    "message": "Gukuramo byarangiye"
+  },
+  "notifyFailed": {
+    "message": "Gukuramo byanze"
+  },
+  "errorExpired": {
+    "message": "Ihuza ryarangiye. Ongera ufungure ipaji ugerageze."
+  },
+  "errorNetwork": {
+    "message": "Ikibazo cya interineti. Reba aho uhuriye wongere ugerageze."
+  },
+  "errorDisk": {
+    "message": "Nta mwanya uhagije uri kuri disiki."
+  },
+  "errorProtected": {
+    "message": "Iyi videwo irarinzwe ntishobora gukururwa."
+  },
+  "errorUnsupported": {
+    "message": "Ubu buryo ntiburashyigikirwa."
+  },
+  "errorCanceled": {
+    "message": "Byahagaritswe."
+  },
+  "errorUnknown": {
+    "message": "Hari ikitagenze neza."
+  },
+  "actionPause": {
+    "message": "Hagarika"
+  },
+  "actionResume": {
+    "message": "Komeza"
+  },
+  "actionCancel": {
+    "message": "Hagarika cyangwa ukureho"
+  },
+  "actionRetry": {
+    "message": "Ongera ugerageze"
+  },
+  "actionShowFolder": {
+    "message": "Erekana muri dosiye"
+  },
+  "actionCopyUrl": {
+    "message": "Koporora aderesi"
+  },
+  "actionClearHistory": {
+    "message": "Siba amateka"
+  },
+  "etaLeft": {
+    "message": "hasigaye $1"
+  },
+  "segmentsProgress": {
+    "message": "ibice $1/$2"
+  },
+  "qualityLabel": {
+    "message": "Ubwiza"
+  },
+  "popupDownloadsLink": {
+    "message": "Ibyakuwe byose"
+  },
+  "popupSettings": {
+    "message": "Igenamiterere"
+  },
+  "rightsNotice": {
+    "message": "Kuramo gusa ibyo utunze, ibyo wahawe uruhushya, cyangwa ibyo wemerewe gukoporora mu buryo bwemewe n’amategeko."
+  },
+  "rightsAccept": {
+    "message": "Ndabyumva"
+  },
+  "accessTitle": {
+    "message": "Emerera Vidget kubona amashusho ku mbuga"
+  },
+  "accessBody": {
+    "message": "Amashusho akenshi aturuka ku rindi seriveri itari iy’ipaji, ni yo mpamvu Vidget isaba uburenganzira ku mbuga zose. Byose biguma ku gikoresho cyawe."
+  },
+  "accessGrant": {
+    "message": "Emera"
+  },
+  "downloadsTitle": {
+    "message": "Ibyakuwe"
+  },
+  "downloadsQueue": {
+    "message": "Umurongo"
+  },
+  "downloadsHistory": {
+    "message": "Amateka"
+  },
+  "downloadsEmptyQueue": {
+    "message": "Nta kirimo gukururwa."
+  },
+  "downloadsEmptyHistory": {
+    "message": "Nta byakuwe byo kwerekana."
+  },
+  "searchPlaceholder": {
+    "message": "Shakisha"
+  },
+  "filterSite": {
+    "message": "Imbuga zose"
+  },
+  "filterStatus": {
+    "message": "Imimerere yose"
+  },
+  "filterDate": {
+    "message": "Itariki iyo ari yo yose"
+  },
+  "filterToday": {
+    "message": "Amasaha 24 ashize"
+  },
+  "filterWeek": {
+    "message": "Iminsi 7 ishize"
+  },
+  "filterMonth": {
+    "message": "Iminsi 30 ishize"
+  },
+  "optionsTitle": {
+    "message": "Igenamiterere rya Vidget"
+  },
+  "optQuality": {
+    "message": "Ubwiza busanzwe"
+  },
+  "optQualityBest": {
+    "message": "Ubwiza buhanitse buhari"
+  },
+  "optQualityAsk": {
+    "message": "Baza buri gihe"
+  },
+  "optFilename": {
+    "message": "Icyitegererezo cy’izina rya dosiye"
+  },
+  "optFilenameHint": {
+    "message": "Ibimenyetso: {title}, {site}, {date}, {quality}, {id}"
+  },
+  "optSubfolders": {
+    "message": "Bika buri rubuga muri dosiye yarwo"
+  },
+  "optWorkers": {
+    "message": "Ibice bikururwa icyarimwe (1 kugeza 16)"
+  },
+  "optJobs": {
+    "message": "Ibikururwa icyarimwe"
+  },
+  "optMinDuration": {
+    "message": "Irengagiza amashusho magufi kurusha (amasegonda)"
+  },
+  "optMinSize": {
+    "message": "Irengagiza amadosiye mato kurusha (KB)"
+  },
+  "optInPage": {
+    "message": "Erekana buto yo Gukuramo hejuru ya videwo"
+  },
+  "optInPageOff": {
+    "message": "Hisha buto kuri izi mbuga"
+  },
+  "optInPageOffHint": {
+    "message": "Izina rimwe ku murongo, urugero example.com"
+  },
+  "optHistoryDays": {
+    "message": "Siba amateka nyuma y’iminsi"
+  },
+  "optHistoryDaysHint": {
+    "message": "0 bigumana ibyakuwe 500 bya nyuma."
+  },
+  "optRightsTitle": {
+    "message": "Inshingano zawe"
+  },
+  "optLicenses": {
+    "message": "Impushya za open source"
+  },
+  "siteUnavailable": {
+    "message": "Vidget ntishobora gukuramo kuri uru rubuga."
+  },
+  "errorCompanion": {
+    "message": "Porogaramu ifasha Vidget ntiyashyizweho cyangwa yahagaze gukora."
+  }
+}

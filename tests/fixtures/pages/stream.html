@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Stream page</title>
+  </head>
+  <body>
+    <video id="main" width="640" height="360"></video>
+    <script>
+      // Stands in for a blob: player: it fetches a manifest and never sets a src.
+      const stream = new URLSearchParams(location.search).get('src');
+      const via = new URLSearchParams(location.search).get('via');
+      if (via === 'xhr') {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', stream);
+        xhr.send();
+      } else {
+        fetch(stream);
+      }
+    </script>
+  </body>
+</html>

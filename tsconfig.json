@@ -1,0 +1,19 @@
+{
+  "extends": "./.wxt/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "types": [
+      "node",
+      "chrome"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    ".output",
+    ".output-e2e",
+    "tests/fixtures/out"
+  ]
+}

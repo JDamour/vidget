@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>EME page</title>
+  </head>
+  <body>
+    <video id="main" width="640" height="360" src="/direct/clip.mp4"></video>
+    <script>
+      const mode = new URLSearchParams(location.search).get('mode');
+      const config = [
+        {
+          initDataTypes: ['webm'],
+          videoCapabilities: [{ contentType: 'video/webm; codecs="vp8"' }],
+        },
+      ];
+      navigator.requestMediaKeySystemAccess('org.w3.clearkey', config).then(async (access) => {
+        // mode=probe only asks what the browser supports, as many sites do.
+        if (mode !== 'probe') {
+          const keys = await access.createMediaKeys();
+          await document.getElementById('main').setMediaKeys(keys);
+        }
+        document.title = 'EME ready';
+      });
+    </script>
+  </body>
+</html>

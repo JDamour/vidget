@@ -1,0 +1,14 @@
+node_modules/
+.output/
+.output-e2e/
+.output-companion/
+# Written by companion/install.mjs for this machine.
+companion/config.json
+companion/host.cmd
+companion/host.sh
+companion/com.vidget.companion.json
+.wxt/
+tests/fixtures/out/
+test-results/
+playwright-report/
+*.log
