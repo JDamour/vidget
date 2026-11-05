@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "description": "Detect and save non-DRM video from web pages.",
+  "license": "MIT",
   "scripts": {
     "dev": "wxt",
     "dev:firefox": "wxt -b firefox --mv3",

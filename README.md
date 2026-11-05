@@ -82,3 +82,7 @@ Store builds never offer YouTube. `pnpm build:companion` makes a self-distribute
 - **A direct download that hasn't started after 5 seconds moves to the worker.** `downloads.download()` sometimes stalled in headless Chromium with no request in the network log. The cause is unknown and hasn't been seen in a normal browser, but the job would otherwise wait forever.
 - **Filename tests run without Playwright's download handling.** It renames every download, so `tests/e2e/filename.spec.ts` drives Chromium over plain CDP.
 - **Segment fetches run as async workers on the offscreen page,** not in Web Workers: network and WebCrypto are already off the main thread. Long MPEG-TS remuxes do run on that page's main thread.
+
+## License
+
+[MIT](LICENSE). Vidget detects and saves only non-DRM video; please respect the terms of the sites and content you download.
